@@ -1,7 +1,3 @@
-# Portfolio Submission Notes
-
-Use this language when submitting the project to Digi Solutions or a similar agency role.
-
 ## Project Name
 
 GrowthPilot — AI-Powered SEO/SEM Agency Landing Page & Campaign Dashboard

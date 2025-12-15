@@ -4,8 +4,6 @@ GrowthPilot is a complete, structured portfolio demo project built for an agency
 
 > Important: This is a self-built demo project, not a real paid client campaign. Use it honestly as sample work created to demonstrate your capabilities.
 
-## Why this project matches the Digi Solutions role
-
 This project was created around the job description requirements:
 
 - Website and landing page development
