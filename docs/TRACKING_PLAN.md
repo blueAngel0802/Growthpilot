@@ -1,60 +1,22 @@
-# GA4 / Google Tag Manager Tracking Plan
+# GA4 / GTM Tracking Plan
 
-## Purpose
+## Recommended events
 
-This tracking plan shows how the demo project would be measured in a real agency campaign environment.
+| Event name | Trigger | Purpose |
+|---|---|---|
+| `cta_click_primary` | Main CTA click | Measures high-intent conversion behavior |
+| `lead_form_start` | User focuses first form field | Measures form engagement |
+| `lead_form_submit_attempt` | Form submit attempted | Measures submission intent |
+| `lead_form_submit_success` | API returns success | Measures completed lead |
+| `lead_form_submit_error` | API returns failure | Detects form issues |
+| `seo_audit_started` | Audit form submitted | Measures tool usage |
+| `seo_audit_completed` | Audit returns result | Measures completed tool interaction |
+| `campaign_plan_started` | Campaign builder submitted | Measures planning tool usage |
+| `campaign_plan_generated` | Campaign plan API returns result | Measures completion |
+| `phone_click` | Phone link click | Measures call intent |
+| `pricing_section_view` | Pricing/offer section viewed | Measures buying intent |
+| `qualified_lead_created` | Lead score passes threshold | Measures high-value conversion |
 
-## Core Events
+## Implementation note
 
-| Event Name | Trigger | Purpose |
-| --- | --- | --- |
-| `cta_click_book_audit` | User clicks primary CTA | Measures CTA engagement |
-| `form_start_lead_audit` | User focuses first form field | Measures form intent |
-| `form_submit_lead_audit` | User submits lead form | Primary conversion |
-| `phone_click_header` | User clicks phone link | Tracks call intent |
-| `scroll_75_percent` | User reaches 75% page depth | Measures page engagement |
-| `case_study_view` | User views case study page | Measures proof content interest |
-| `recommendation_goal_change` | User switches AI recommendation tab | Measures dashboard interaction |
-
-## Recommended GTM Variables
-
-- Page URL
-- Page Path
-- UTM Source
-- UTM Medium
-- UTM Campaign
-- UTM Term
-- UTM Content
-- Button Text
-- Form ID
-- Referrer
-
-## Conversion Setup
-
-Primary conversion:
-
-- `form_submit_lead_audit`
-
-Secondary conversions:
-
-- `phone_click_header`
-- `cta_click_book_audit`
-- `case_study_view`
-
-## UTM Example
-
-```txt
-?utm_source=google&utm_medium=cpc&utm_campaign=agency_audit&utm_term=seo_landing_page&utm_content=headline_test_a
-```
-
-## Client Reporting Notes
-
-Report weekly on:
-
-- Spend
-- Conversions
-- Cost per acquisition
-- Landing page conversion rate
-- Top converting channel
-- Top improvement recommendation
-- Next experiment
+The project includes `lib/analytics.ts`, which pushes events into `window.dataLayer` and calls `gtag` when available. This keeps the code ready for GTM/GA4 implementation without requiring tracking credentials in the demo.

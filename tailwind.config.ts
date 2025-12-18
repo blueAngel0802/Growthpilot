@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        soft: "0 18px 60px rgba(15, 23, 42, 0.10)"
-      }
-    }
+        soft: "0 18px 60px rgba(15, 23, 42, 0.10)",
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
 
 export default config;

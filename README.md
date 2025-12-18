@@ -1,76 +1,41 @@
-# GrowthPilot — AI-Powered SEO/SEM Agency Demo
+# GrowthPilot Pro — Agency Full Stack SEO/SEM + AI Automation Demo
 
-GrowthPilot is a complete, structured portfolio demo project built for an agency-style Senior Full Stack Developer role. It demonstrates front-end development, full-stack architecture, SEO/SEM awareness, landing page optimization, analytics planning, CMS readiness, and AI-forward workflow ideas.
+GrowthPilot Pro is a self-built portfolio project designed to demonstrate agency-style full stack development for a Senior Full Stack Developer role.
 
-> Important: This is a self-built demo project, not a real paid client campaign. Use it honestly as sample work created to demonstrate your capabilities.
+It is intentionally structured as more than a static dashboard. It includes multiple pages, reusable components, API routes, SEO metadata, sitemap/robots support, CMS-style blog content, analytics tracking hooks, lead scoring logic, and interactive campaign planning tools.
 
-This project was created around the job description requirements:
+## What this project demonstrates
 
-- Website and landing page development
-- Scalable front-end component structure
-- Back-end/API route example
-- SEO-ready metadata, sitemap, robots, schema, and content structure
-- SEM/PPC landing page strategy and campaign dashboard
-- GA4/GTM tracking plan
-- Client-friendly reporting UI
-- AI workflow and automation recommendations
-- CMS/WordPress-ready content mapping
-- Deployment-ready Next.js project structure
+- Responsive React / Next.js application structure
+- TypeScript component architecture
+- Front-end landing page development
+- API route implementation for demo backend workflows
+- SEO-friendly metadata, sitemap, robots, and blog structure
+- SEM/PPC landing page strategy and tracking model
+- GA4/GTM-ready event naming and dataLayer tracking helper
+- CMS-ready blog/content model
+- Lead form submission and scoring simulation
+- AI-forward campaign planning simulation
+- Client-facing reporting and dashboard UX
 
-## Tech Stack
+## Pages
 
-- Next.js App Router
-- React
-- TypeScript
-- Tailwind CSS
-- Lucide React icons
-- Next Metadata API
-- Next API routes
-- GA4/GTM-ready setup using environment variables
+- `/` — conversion-focused landing page with lead form
+- `/dashboard` — interactive client campaign dashboard
+- `/audit` — SEO audit simulator powered by API route
+- `/campaign-builder` — campaign/landing page plan generator
+- `/case-study` — portfolio case study explanation
+- `/blog` — CMS-style SEO blog index
+- `/blog/[slug]` — dynamic blog detail pages
 
-## Project Structure
+## API routes
 
-```txt
-digisolutions-growthpilot/
-├── app/
-│   ├── api/recommendations/route.ts
-│   ├── case-study/page.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   ├── page.tsx
-│   ├── robots.ts
-│   └── sitemap.ts
-├── components/
-│   ├── AIRecommendations.tsx
-│   ├── AuditScores.tsx
-│   ├── CampaignDashboard.tsx
-│   ├── CaseStudySection.tsx
-│   ├── CTASection.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── MetricsGrid.tsx
-│   ├── Navbar.tsx
-│   ├── ProcessSection.tsx
-│   └── ServiceCards.tsx
-├── docs/
-│   ├── CMS_CONTENT_MODEL.md
-│   ├── DEPLOYMENT.md
-│   ├── PORTFOLIO_SUBMISSION.md
-│   ├── SEO_SEM_STRATEGY.md
-│   └── TRACKING_PLAN.md
-├── lib/
-│   ├── data.ts
-│   ├── seo.ts
-│   └── types.ts
-├── public/
-│   └── favicon.svg
-├── .env.example
-├── package.json
-├── tailwind.config.ts
-└── tsconfig.json
-```
+- `POST /api/audit` — returns simulated SEO/performance/conversion audit
+- `POST /api/campaign-plan` — generates landing page strategy, ad angles, tracking events, and automation ideas
+- `GET /api/recommendations?goal=leads` — returns campaign recommendations
+- `POST /api/leads` — scores and prioritizes submitted demo leads
 
-## How to Run Locally
+## Run locally
 
 ```bash
 npm install
@@ -83,37 +48,17 @@ Open:
 http://localhost:3000
 ```
 
-## Build for Production
+## Build
 
 ```bash
 npm run build
 npm run start
 ```
 
-## API Example
+## Portfolio positioning
 
-The project includes a sample API route for AI-style recommendations:
+Use this honestly as a self-built demo project:
 
-```txt
-/api/recommendations?goal=leads
-/api/recommendations?goal=seo
-/api/recommendations?goal=automation
-```
+> I built GrowthPilot Pro as a portfolio demo to show agency-style full stack development, SEO/SEM landing page strategy, campaign analytics, CMS-ready content architecture, lead capture workflows, and AI-forward automation concepts.
 
-## Environment Variables
-
-Copy `.env.example` to `.env.local` and update values:
-
-```bash
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
-NEXT_PUBLIC_SITE_URL=https://your-demo-domain.com
-```
-
-## Suggested Portfolio Summary
-
-GrowthPilot is a self-built demo project designed to show agency-style full stack development, SEO/SEM landing page strategy, analytics tracking, client-facing reporting, CMS-ready content structure, and AI-forward optimization workflows.
-
-## Suggested Submission Note
-
-I built this project as a portfolio demo to show the kind of agency work I can own from strategy through execution. It includes a responsive landing page, campaign dashboard, SEO audit scoring, GA4/GTM tracking plan, CMS/WordPress-ready content model, and AI recommendation workflow.
+Do not present it as a real client campaign. Present it as a complete sample project built to demonstrate the type of work required by an agency.

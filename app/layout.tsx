@@ -1,31 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
-import { defaultMetadata, organizationJsonLd } from "@/lib/seo";
+import type { ReactNode } from "react";
 import "./globals.css";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+export const metadata: Metadata = {
+  title: "GrowthPilot Demo | Full Stack SEO/SEM Agency Project",
+  description:
+    "A full stack portfolio demo for agency web development, SEO/SEM landing pages, analytics tracking, CMS content, and AI automation workflows.",
+};
 
-export const metadata: Metadata = defaultMetadata;
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
-        />
-        <Navbar />
+      <body>
+        <Nav />
         {children}
         <Footer />
-        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
-        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       </body>
     </html>
   );

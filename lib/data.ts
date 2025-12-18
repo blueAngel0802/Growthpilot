@@ -1,150 +1,79 @@
-import {
-  BarChart3,
-  Bot,
-  Code2,
-  Gauge,
-  Globe2,
-  Megaphone,
-  Search,
-  Target,
-  Workflow,
-  Zap
-} from "lucide-react";
-import type { AuditItem, CampaignChannel, RecommendationMap, Service } from "@/lib/types";
+import type { BlogPost, CampaignMetric } from "./types";
 
-export const services: Service[] = [
+export const campaignMetrics: CampaignMetric[] = [
+  { channel: "SEO", spend: 1200, visits: 9800, leads: 188, revenue: 38200 },
+  { channel: "Google Ads", spend: 5200, visits: 7200, leads: 264, revenue: 61600 },
+  { channel: "Retargeting", spend: 2100, visits: 3400, leads: 82, revenue: 17900 },
+  { channel: "Email", spend: 650, visits: 2800, leads: 61, revenue: 12600 },
+];
+
+export const serviceCards = [
   {
-    icon: Globe2,
-    title: "SEO-ready websites",
-    description:
-      "Responsive websites and landing pages with clean structure, metadata planning, schema readiness, and Core Web Vitals in mind."
+    title: "SEO-ready web builds",
+    description: "Clean site architecture, metadata planning, schema, fast rendering, and conversion-focused content sections.",
   },
   {
-    icon: Megaphone,
-    title: "SEM/PPC landing pages",
-    description:
-      "Campaign-specific pages built around message match, fast load time, CTA clarity, and conversion tracking."
+    title: "SEM landing pages",
+    description: "Campaign-specific pages with message match, CTA hierarchy, lead forms, tracking events, and A/B-test-ready modules.",
   },
   {
-    icon: Bot,
-    title: "AI workflow automation",
-    description:
-      "AI-assisted content briefs, lead routing, client reporting summaries, and campaign improvement recommendations."
-  },
-  {
-    icon: Code2,
     title: "Full-stack integrations",
-    description:
-      "API-ready architecture for CMS content, forms, analytics events, CRM handoff, hosting, deployment, and troubleshooting."
-  }
+    description: "API routes, CRM handoff patterns, analytics events, CMS-ready content models, hosting, deployment, and troubleshooting.",
+  },
+  {
+    title: "AI workflow automation",
+    description: "AI-assisted recommendations, campaign briefs, client summaries, lead routing, and operational workflow improvements.",
+  },
 ];
 
-export const metrics = [
-  {
-    icon: Zap,
-    label: "Performance score",
-    value: "94/100",
-    detail: "Optimized layout, image strategy, script loading, and mobile-first responsiveness."
-  },
-  {
-    icon: Search,
-    label: "SEO readiness",
-    value: "91/100",
-    detail: "Keyword-focused content structure, metadata plan, FAQ schema, and page hierarchy."
-  },
-  {
-    icon: Target,
-    label: "Conversion target",
-    value: "+32%",
-    detail: "CTA placement, trust sections, clear offer framing, and low-friction lead capture."
-  },
-  {
-    icon: BarChart3,
-    label: "Tracking coverage",
-    value: "18 events",
-    detail: "CTA clicks, form starts, form submits, calls, scroll depth, source, and funnel steps."
-  }
+export const portfolioHighlights = [
+  "Next.js App Router project with multiple pages and API routes",
+  "Interactive SEO audit simulator with generated recommendations",
+  "Campaign builder that creates landing page strategy, ad angles, and tracking events",
+  "Client dashboard with channel filters, ROI metrics, and funnel visualization",
+  "CMS-style blog content model with dynamic blog detail pages",
+  "GA4/GTM event tracking plan documented for implementation",
+  "Deployment-ready structure for Vercel, Netlify, or agency hosting workflow",
 ];
 
-export const campaignData: CampaignChannel[] = [
+export const blogPosts: BlogPost[] = [
   {
-    channel: "Google Search Ads",
-    spend: "$4,800",
-    conversions: 186,
-    cpa: "$25.80",
-    status: "Scaling"
+    slug: "seo-sem-landing-page-framework",
+    title: "A Practical SEO/SEM Landing Page Framework for Service Businesses",
+    excerpt: "How to connect paid search intent, organic search structure, page speed, CTA placement, and conversion tracking into one landing page system.",
+    category: "SEO/SEM",
+    date: "2025-10-15",
+    readingTime: "5 min read",
+    content: [
+      "High-performing landing pages are not only about visual design. They need a tight connection between search intent, page message, CTA placement, and measurable conversion events.",
+      "For SEO, the page should have a clear heading hierarchy, helpful supporting sections, descriptive metadata, schema opportunities, and internal links. For SEM, the page should match the ad promise quickly and reduce friction before the first conversion action.",
+      "A practical build should include hero messaging, proof blocks, benefit sections, objection handling, FAQs, fast forms, and tracking events for every meaningful action. This gives the marketing team enough data to improve campaigns after launch.",
+    ],
   },
   {
-    channel: "SEO Landing Pages",
-    spend: "$1,200",
-    conversions: 92,
-    cpa: "$13.04",
-    status: "Optimizing"
+    slug: "ai-workflows-for-agency-operations",
+    title: "Where AI Actually Helps in Agency Delivery Workflows",
+    excerpt: "AI can improve agency output when it supports repeatable workflows like campaign briefs, weekly summaries, lead routing, and QA checks.",
+    category: "AI Automation",
+    date: "2025-10-16",
+    readingTime: "4 min read",
+    content: [
+      "AI is most useful in agency environments when it improves repeatable operational work instead of replacing strategy. The goal is to reduce manual reporting, speed up research, and make delivery more consistent.",
+      "Useful workflows include generating first-draft campaign summaries, turning SEO audits into task lists, identifying landing page issues, and routing high-intent leads to the right team members.",
+      "The best implementations keep a human in the loop. AI should suggest, summarize, and organize, while the team makes final decisions based on client context and performance data.",
+    ],
   },
   {
-    channel: "Retargeting",
-    spend: "$2,150",
-    conversions: 74,
-    cpa: "$29.05",
-    status: "Testing"
-  }
-];
-
-export const auditItems: AuditItem[] = [
-  {
-    label: "Core Web Vitals",
-    value: 94,
-    note: "Fast load time, responsive layout, and stable visual structure."
+    slug: "ga4-gtm-tracking-plan-for-lead-generation",
+    title: "A Simple GA4 and GTM Tracking Plan for Lead Generation Websites",
+    excerpt: "A practical event-tracking structure for calls, forms, CTA clicks, scroll depth, campaign source, and qualified lead indicators.",
+    category: "Analytics",
+    date: "2025-10-17",
+    readingTime: "6 min read",
+    content: [
+      "Lead generation websites need tracking that connects user behavior to business outcomes. Page views are not enough. Teams need to understand which channels, CTAs, and pages create qualified conversations.",
+      "A strong tracking plan should include CTA clicks, form starts, form submissions, phone clicks, email clicks, scroll depth, thank-you page views, campaign parameters, and lead quality fields.",
+      "The implementation can be managed through Google Tag Manager and reported in GA4. Clear naming conventions are important because the data needs to be understandable to both technical and non-technical stakeholders.",
+    ],
   },
-  {
-    label: "Technical SEO",
-    value: 91,
-    note: "Metadata, page hierarchy, crawl structure, sitemap, and schema planning."
-  },
-  {
-    label: "Conversion UX",
-    value: 88,
-    note: "CTA clarity, form placement, proof blocks, and friction reduction."
-  },
-  {
-    label: "Tracking Quality",
-    value: 96,
-    note: "GA4/GTM event map, UTM flow, ad pixels, and conversion validation."
-  }
-];
-
-export const recommendations: RecommendationMap = {
-  leads: [
-    "Move the consultation form above the fold for mobile paid-search traffic.",
-    "Add call tracking to paid campaigns and map calls to keyword, source, and landing page.",
-    "Create one service-specific landing page per ad group to improve Quality Score and message match."
-  ],
-  seo: [
-    "Add FAQ schema and internal links to service pages targeting bottom-funnel keywords.",
-    "Compress hero media and defer non-critical scripts to protect Core Web Vitals.",
-    "Build comparison-style blog content around high-intent agency and service keywords."
-  ],
-  automation: [
-    "Send AI-generated weekly campaign summaries to clients before status meetings.",
-    "Route high-intent leads to Slack or CRM based on form answers and ad source.",
-    "Generate draft meta titles and descriptions from approved campaign briefs."
-  ]
-};
-
-export const processSteps = [
-  {
-    icon: Gauge,
-    title: "Audit",
-    description: "Review page speed, tracking, SEO structure, conversion UX, CMS setup, and deployment health."
-  },
-  {
-    icon: Workflow,
-    title: "Build",
-    description: "Create reusable components, campaign-ready sections, API-ready content models, and responsive layouts."
-  },
-  {
-    icon: BarChart3,
-    title: "Optimize",
-    description: "Analyze performance, improve landing page messaging, validate events, and generate next-step recommendations."
-  }
 ];

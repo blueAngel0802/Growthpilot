@@ -1,20 +1,22 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://growthpilot-demo.local";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const staticRoutes = ["", "/dashboard", "/audit", "/campaign-builder", "/case-study", "/blog"];
 
   return [
-    {
-      url: siteUrl,
+    ...staticRoutes.map((route) => ({
+      url: `${baseUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1
-    },
-    {
-      url: `${siteUrl}/case-study`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8
-    }
+      changeFrequency: "weekly" as const,
+      priority: route === "" ? 1 : 0.8,
+    })),
+    ...blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }

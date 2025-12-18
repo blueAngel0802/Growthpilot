@@ -1,25 +1,42 @@
-import type { LucideIcon } from "lucide-react";
+export type CampaignChannel = "SEO" | "Google Ads" | "Retargeting" | "Email";
 
-export type CampaignChannel = {
-  channel: string;
-  spend: string;
-  conversions: number;
-  cpa: string;
-  status: "Scaling" | "Optimizing" | "Testing";
+export type CampaignMetric = {
+  channel: CampaignChannel;
+  spend: number;
+  visits: number;
+  leads: number;
+  revenue: number;
 };
 
-export type AuditItem = {
-  label: string;
-  value: number;
-  note: string;
+export type AuditResult = {
+  url: string;
+  overallScore: number;
+  technicalSeo: number;
+  performance: number;
+  conversionUx: number;
+  tracking: number;
+  issues: string[];
+  recommendations: string[];
+  generatedAt: string;
 };
 
-export type Service = {
-  icon: LucideIcon;
+export type CampaignPlan = {
+  industry: string;
+  goal: string;
+  monthlyBudget: number;
+  landingPageHeadline: string;
+  adAngles: string[];
+  landingPageSections: string[];
+  trackingEvents: string[];
+  automationIdeas: string[];
+};
+
+export type BlogPost = {
+  slug: string;
   title: string;
-  description: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readingTime: string;
+  content: string[];
 };
-
-export type RecommendationGoal = "leads" | "seo" | "automation";
-
-export type RecommendationMap = Record<RecommendationGoal, string[]>;

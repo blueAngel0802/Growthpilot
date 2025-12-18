@@ -1,27 +1,21 @@
-## Project Name
+# Portfolio Submission Copy
 
-GrowthPilot — AI-Powered SEO/SEM Agency Landing Page & Campaign Dashboard
+## Project name
 
-## One-sentence summary
+GrowthPilot Pro — Agency SEO/SEM + AI Automation Platform Demo
 
-GrowthPilot is a self-built portfolio demo showing full-stack development, SEO/SEM landing page strategy, conversion-focused UI, analytics tracking, CMS-ready content structure, and AI-assisted campaign optimization workflows.
+## Short description
 
-## Honest project description
+GrowthPilot Pro is a self-built full stack portfolio project that demonstrates agency-style website development, SEO/SEM landing page strategy, campaign analytics, lead capture, CMS-ready blog content, tracking plans, and AI-forward automation workflows.
 
-I built this project as a demo portfolio piece to show how I approach agency-style web development from strategy through implementation. It includes a responsive landing page, reusable component architecture, SEO metadata, sitemap/robots setup, campaign performance dashboard, simulated AI optimization recommendations, GA4/GTM tracking plan, and CMS/WordPress content mapping.
+## Technologies/frameworks specialized in
 
-## Technologies/frameworks I specialize in
+React, Next.js App Router, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, API routes, SEO metadata, sitemap/robots configuration, CMS content modeling, GA4/GTM tracking strategy, and deployment-ready hosting workflow.
 
-React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Node.js/API routes, WordPress/CMS content structure, REST-style integrations, Vercel deployment, GA4, Google Tag Manager, SEO/SEM landing page optimization.
+## Brief SEO/SEM summary
 
-## Brief SEO/SEM experience summary
+I understand how to build SEO-friendly and SEM-focused web experiences that connect search intent, landing page messaging, page speed, CTA placement, analytics events, and conversion goals. This demo includes SEO metadata, blog structure, audit recommendations, campaign landing page planning, and event-tracking documentation.
 
-I understand how to build SEO-friendly and SEM-focused web experiences with clean page structure, fast performance, optimized metadata, conversion-focused content, clear CTA placement, UTM strategy, GA4/GTM event planning, and campaign-specific landing pages that align ad intent with page messaging.
+## Honest note
 
-## Example campaign wording
-
-For this demo, I designed a sample lead-generation campaign workflow focused on increasing qualified consultation requests through PPC landing pages, SEO content structure, conversion UX improvements, analytics event tracking, and AI-assisted optimization recommendations.
-
-## What to avoid saying
-
-Do not claim this was a real client project or a real paid campaign. Present it as a self-built demo project created specifically to show relevant experience.
+This is a portfolio demo project, not a real client campaign. The API routes use simulated business logic to demonstrate architecture and workflow. They can be connected later to a CRM, WordPress, GA4, OpenAI, or a production database.
