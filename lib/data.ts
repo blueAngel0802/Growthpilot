@@ -114,3 +114,26 @@ export const recommendations: Record<RecommendationGoal, string[]> = {
     "Use AI to turn SEO audit results into prioritized developer and marketing tasks.",
   ],
 };
+
+export const auditItems = [
+  {
+    label: "Core Web Vitals",
+    value: 94,
+    note: "Fast load time, optimized layout stability, and responsive rendering.",
+  },
+  {
+    label: "Technical SEO",
+    value: 91,
+    note: "Metadata, heading structure, sitemap, robots, and crawl-friendly pages.",
+  },
+  {
+    label: "Conversion UX",
+    value: 88,
+    note: "Clear CTAs, trust sections, short forms, and campaign-specific messaging.",
+  },
+  {
+    label: "Tracking Quality",
+    value: 96,
+    note: "GA4/GTM-ready events for forms, calls, CTA clicks, and campaign sources.",
+  },
+];
