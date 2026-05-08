@@ -1,4 +1,5 @@
 export type CampaignChannel = "SEO" | "Google Ads" | "Retargeting" | "Email";
+export type RecommendationGoal = "leads" | "seo" | "automation";
 
 export type CampaignMetric = {
   channel: CampaignChannel;

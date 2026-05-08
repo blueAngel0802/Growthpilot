@@ -1,28 +1,44 @@
-import type { BlogPost, CampaignMetric } from "./types";
+import type { BlogPost, CampaignMetric, RecommendationGoal } from "./types";
 
 export const campaignMetrics: CampaignMetric[] = [
   { channel: "SEO", spend: 1200, visits: 9800, leads: 188, revenue: 38200 },
-  { channel: "Google Ads", spend: 5200, visits: 7200, leads: 264, revenue: 61600 },
-  { channel: "Retargeting", spend: 2100, visits: 3400, leads: 82, revenue: 17900 },
+  {
+    channel: "Google Ads",
+    spend: 5200,
+    visits: 7200,
+    leads: 264,
+    revenue: 61600,
+  },
+  {
+    channel: "Retargeting",
+    spend: 2100,
+    visits: 3400,
+    leads: 82,
+    revenue: 17900,
+  },
   { channel: "Email", spend: 650, visits: 2800, leads: 61, revenue: 12600 },
 ];
 
 export const serviceCards = [
   {
     title: "SEO-ready web builds",
-    description: "Clean site architecture, metadata planning, schema, fast rendering, and conversion-focused content sections.",
+    description:
+      "Clean site architecture, metadata planning, schema, fast rendering, and conversion-focused content sections.",
   },
   {
     title: "SEM landing pages",
-    description: "Campaign-specific pages with message match, CTA hierarchy, lead forms, tracking events, and A/B-test-ready modules.",
+    description:
+      "Campaign-specific pages with message match, CTA hierarchy, lead forms, tracking events, and A/B-test-ready modules.",
   },
   {
     title: "Full-stack integrations",
-    description: "API routes, CRM handoff patterns, analytics events, CMS-ready content models, hosting, deployment, and troubleshooting.",
+    description:
+      "API routes, CRM handoff patterns, analytics events, CMS-ready content models, hosting, deployment, and troubleshooting.",
   },
   {
     title: "AI workflow automation",
-    description: "AI-assisted recommendations, campaign briefs, client summaries, lead routing, and operational workflow improvements.",
+    description:
+      "AI-assisted recommendations, campaign briefs, client summaries, lead routing, and operational workflow improvements.",
   },
 ];
 
@@ -40,7 +56,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "seo-sem-landing-page-framework",
     title: "A Practical SEO/SEM Landing Page Framework for Service Businesses",
-    excerpt: "How to connect paid search intent, organic search structure, page speed, CTA placement, and conversion tracking into one landing page system.",
+    excerpt:
+      "How to connect paid search intent, organic search structure, page speed, CTA placement, and conversion tracking into one landing page system.",
     category: "SEO/SEM",
     date: "2025-10-15",
     readingTime: "5 min read",
@@ -53,7 +70,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-workflows-for-agency-operations",
     title: "Where AI Actually Helps in Agency Delivery Workflows",
-    excerpt: "AI can improve agency output when it supports repeatable workflows like campaign briefs, weekly summaries, lead routing, and QA checks.",
+    excerpt:
+      "AI can improve agency output when it supports repeatable workflows like campaign briefs, weekly summaries, lead routing, and QA checks.",
     category: "AI Automation",
     date: "2025-10-16",
     readingTime: "4 min read",
@@ -66,7 +84,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ga4-gtm-tracking-plan-for-lead-generation",
     title: "A Simple GA4 and GTM Tracking Plan for Lead Generation Websites",
-    excerpt: "A practical event-tracking structure for calls, forms, CTA clicks, scroll depth, campaign source, and qualified lead indicators.",
+    excerpt:
+      "A practical event-tracking structure for calls, forms, CTA clicks, scroll depth, campaign source, and qualified lead indicators.",
     category: "Analytics",
     date: "2025-10-17",
     readingTime: "6 min read",
@@ -77,3 +96,21 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ];
+
+export const recommendations: Record<RecommendationGoal, string[]> = {
+  leads: [
+    "Move the primary consultation CTA above the fold on mobile.",
+    "Track form starts, form submissions, phone clicks, and high-intent CTA clicks.",
+    "Create campaign-specific landing pages for each major service category.",
+  ],
+  seo: [
+    "Add FAQ schema to service pages targeting high-intent search queries.",
+    "Improve internal linking between blog posts, service pages, and conversion pages.",
+    "Compress large media assets and defer non-critical scripts to improve Core Web Vitals.",
+  ],
+  automation: [
+    "Generate weekly AI-assisted client campaign summaries from performance data.",
+    "Route high-intent leads to the right team based on form answers and campaign source.",
+    "Use AI to turn SEO audit results into prioritized developer and marketing tasks.",
+  ],
+};
